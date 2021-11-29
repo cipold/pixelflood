@@ -87,7 +87,7 @@ endif()
 if (NETWORK MATCHES "EPOLL")
     set(USE_EPOLL ON)
     add_definitions(-DUSE_NETWORK_EPOLL)
-    list(APPEND my_SOURCES network_epoll.cpp network_epoll.hpp)
+    list(APPEND my_SOURCES network_epoll.cpp network_epoll.hpp parse4g.s)
 endif()
 
 cmake_dependent_option(USE_EDGE_TRIGGERED_EPOLL "Use edge triggered epoll" OFF "USE_EPOLL" OFF)
